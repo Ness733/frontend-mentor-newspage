@@ -31,12 +31,13 @@
   <div class="container px-5 md:px-0 md:w-[66%] md:mt-20">
     <nav class="flex justify-between my-10 md:my-0">
       <img src="../assets/images/logo.svg" alt="w logo">
-      <ul class="md:flex gap-14 text-dark-grayish-blue hidden">
-        <li class="hover:text-primary hover:cursor-pointer">Home</li>
-        <li class="hover:text-primary hover:cursor-pointer">New</li>
-        <li class="hover:text-primary hover:cursor-pointer">Popular</li>
-        <li class="hover:text-primary hover:cursor-pointer">Trending</li>
-        <li class="hover:text-primary hover:cursor-pointer">Categories</li>
+      <ul
+        class="md:flex gap-14 text-dark-grayish-blue hidden hover:*:text-primary hover:*:cursor-pointer *:h-fit">
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
       </ul>
     </nav>
     <div class="md:grid md:grid-cols-3 md:gap-x-10 md:gap-y-20 md:my-20">
@@ -77,6 +78,7 @@
 
 
 
+
       @for (post of posts; track post.id){
       <div class="my-7">
         <img class="float-left w-[95px] md:w-[120px]" src="{{ post.image }}"
@@ -91,9 +93,9 @@
                 class="text-dark-grayish-blue text-sm md:text-base text-balance">
                 {{ post.body }}
               </p>
-
         </div>
       </div>}
+
 
 
 
