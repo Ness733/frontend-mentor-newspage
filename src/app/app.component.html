@@ -26,19 +26,17 @@
 </head>
 
 
-<body class="flex flex-col justify-center items-center z-10">
+<body class="flex flex-col justify-center items-center">
 
-  <span class="{{burgerMenuToggle
+  <span class="md:hidden {{burgerMenuToggle
     ? 'bg-black opacity-60 fixed top-0 left-0 h-full w-full' : 'bg-transparent'
     }}">
   </span>
 
-  <div class="container px-5 md:px-0 md:w-[66%] md:mt-20">
+  <div class="container px-5 md:px-0 md:w-[95%] 2xl:w-[66%] md:mt-20">
     <nav class="flex justify-between my-10 md:my-0">
       <img class="w-10 md:w-fit self-center md:h-fit"
         src="../assets/images/logo.svg" alt="w logo">
-
-
       <img (click)="burgerMenuToggle = !burgerMenuToggle"
         class="self-center md:hidden h-fit {{burgerMenuToggle ? 'hidden' : 'block'}}"
         src='../assets/images/icon-menu.svg' alt='menu icon'>
@@ -60,9 +58,6 @@
       </span>
 
       }
-
-
-
       <ul
         class="md:flex gap-14 text-dark-grayish-blue hidden hover:*:text-primary hover:*:cursor-pointer *:h-fit">
         <li>Home</li>
@@ -99,17 +94,10 @@
               class="bg-secondary text-xs font-normal md:text-sm px-6 py-4 md:font-extrabold tracking-[0.4em] text-white md:col-start-2 w-[175px] md:w-1/2 hover:bg-very-dark-blue my-6 md:my-0">READ
               MORE</button>
           </div>
-
         </div>
-
       </div>
 
-
-
       <app-news-item></app-news-item>
-
-
-
 
       @for (post of posts; track post.id){
       <div class="my-7">
@@ -127,19 +115,6 @@
               </p>
         </div>
       </div>}
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   </div>
 
