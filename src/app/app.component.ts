@@ -33,4 +33,6 @@ export class AppComponent {
 			image: "../assets/images/image-gaming-growth.jpg",
 		},
 	];
+
+	burgerMenuToggle = false;
 }
