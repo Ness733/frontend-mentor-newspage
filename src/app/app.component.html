@@ -16,6 +16,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .attribution a {
@@ -67,59 +68,42 @@
           </div>
 
         </div>
-      </div>
 
-
-      <div class="even:text-red-500">
-        <app-news-item></app-news-item>
       </div>
 
 
 
+      <app-news-item></app-news-item>
 
-      <div class="col-start-1">
-        <img class="float-left w-[120px]"
-          src="../assets/images/image-retro-pcs.jpg" alt="">
-        <div class="flex flex-col gap-5 pl-7">
-          <h1 class="text-4xl font-bold text-light-grayish-blue">01</h1>
-          <h2
-            class="text-xl font-extrabold hover:text-secondary hover:cursor-pointer">
-            Reviving Retro PCs</h2>
-          <p class="text-dark-grayish-blue text-md text-balance">
-            What happens when old PCs are given modern upgrades?
-          </p>
+
+
+      @for (post of posts; track post.id){
+      <div class="my-7">
+        <img class="float-left w-[95px] md:w-[120px]" src="{{ post.image }}"
+          alt="">
+        <div class="flex flex-col gap-2 md:gap-5 pl-7">
+          <h1 class="text-4xl font-bold text-light-grayish-blue">@if(post.id
+            <= 9) {0{{ post.id + 1 }}} @else {{{ post.id }}} </h1>
+              <h2
+                class="text-base md:text-xl font-extrabold hover:text-secondary hover:cursor-pointer">
+                {{ post.title }}</h2>
+              <p
+                class="text-dark-grayish-blue text-sm md:text-base text-balance">
+                {{ post.body }}
+              </p>
+
         </div>
-      </div>
+      </div>}
 
 
-      <div class="col-start-2">
-        <img class="float-left w-[120px]"
-          src="../assets/images/image-top-laptops.jpg" alt="">
-        <div class="flex flex-col pl-7 gap-5">
-          <h1 class="text-4xl font-bold text-light-grayish-blue">02</h1>
-          <h2
-            class="text-xl font-extrabold hover:text-secondary hover:cursor-pointer">
-            Top 10 Laptops of 2022</h2>
-          <p class="text-dark-grayish-blue text-md w-fit text-balance">
-            Our best picks for various needs and budgets.
-          </p>
-        </div>
-      </div>
 
 
-      <div class="col-start-3">
-        <img class="float-left w-[120px]"
-          src="../assets/images/image-gaming-growth.jpg" alt="">
-        <div class="flex flex-col gap-5 pl-7">
-          <h1 class="text-4xl font-bold text-light-grayish-blue">03</h1>
-          <h2
-            class="text-xl font-extrabold hover:text-secondary hover:cursor-pointer">
-            The Growth of Gaming</h2>
-          <p class="text-dark-grayish-blue text-md text-pretty">
-            How the pandemic has sparked fresh opportunities.
-          </p>
-        </div>
-      </div>
+
+
+
+
+
+
 
 
     </div>
