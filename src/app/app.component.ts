@@ -18,19 +18,19 @@ export class AppComponent {
 			id: 0,
 			title: "Reviving Retro PCs",
 			body: "What happens when old PCs are given modern upgrades?",
-			image: "../assets/images/image-retro-pcs.jpg",
+			image: "assets/images/image-retro-pcs.jpg",
 		},
 		{
 			id: 1,
 			title: "Top 10 Laptops of 2022",
 			body: "Our best picks for various needs and budgets.",
-			image: "../assets/images/image-top-laptops.jpg",
+			image: "assets/images/image-top-laptops.jpg",
 		},
 		{
 			id: 2,
 			title: "The Growth of Gaming",
 			body: "How the pandemic has sparked fresh opportunities.",
-			image: "../assets/images/image-gaming-growth.jpg",
+			image: "assets/images/image-gaming-growth.jpg",
 		},
 	];
 
